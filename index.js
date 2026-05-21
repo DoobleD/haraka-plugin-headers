@@ -489,7 +489,7 @@ exports.from_phish = function (next, connection) {
       connection.transaction.results.add(this, { fail: 'from_phish(unparseable)' })
       return next()
     }
-    const hdr_from_domain = tlds.get_organizational_domain(parsed_from[0].address().split('@').at(-1))
+    const hdr_from_domain = tlds.get_organizational_domain(parsed_from[0].address.split('@').at(-1))
 
     for (const pt of this.phish_targets) {
       if (pt.pattern.test(this.normalize_lookalikes(hdr_from))) {

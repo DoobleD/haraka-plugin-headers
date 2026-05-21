@@ -4,6 +4,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Unreleased
 
+- fix(phish): use .address instead of .address() for addresses parsed by address-rfc2822
+
 ### [1.1.3] - 2026-05-20
 
 - revert a 1.2.0 change that snuck by, fixes #12
